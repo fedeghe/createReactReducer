@@ -1,0 +1,7 @@
+{
+  "name": "createReactReducer",
+  "version": "0.0.1",
+  "bin": "index.js",
+  "author": "fedeghe <fedeghe@gmail.com>",
+  "license": "MIT"
+}
