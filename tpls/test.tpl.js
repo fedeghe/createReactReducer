@@ -4,7 +4,7 @@ import ACTIONS from "../actions"
 import rx from "../index.js"
 const { func: reducer } = rx;
 
-describe('test reducer', () => {
+describe("test reducer", () => {
     const testReducerAction = label => {
         describe(`tests for action: ${label}`, () => {
             it.each(TESTACTIONS[label])(

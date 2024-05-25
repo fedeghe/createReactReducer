@@ -44,7 +44,7 @@ const runners = {
     actions: tpl => {
         const top = actions.map(action => {
             const A = uc(action)
-            return `export const ${A} = Symbol('${A} description here')`
+            return `export const ${A} = Symbol("${A} description here")`
         }).join(`;\n`)
         const exp = `export default {\n\t${actions.map(a => uc(a)).join(`,\n\t`)},\n}`
         const content = tpl 
