@@ -53,7 +53,7 @@ const runners = {
         fs.writeFileSync(`${reducerFolder}/actions.js`, content);
     },
     test: tpl => {
-        fs.writeFileSync(`${reducerFolder}/test/index.test.js`, tpl);
+        fs.writeFileSync(`${reducerFolder}/test/index.spec.js`, tpl);
     },
 }
 
