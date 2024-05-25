@@ -1,7 +1,7 @@
-import { ACTION } from '../../actions'
+import { ACTION } from "../../actions"
 const E = [
     [
-        'test what',
+        "test what",
         {}, // initialState
         {
             type: ACTION,

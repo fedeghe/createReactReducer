@@ -76,7 +76,7 @@ fs.writeFileSync(
         .replace(
             /\/\/IMPORTS/,
             actions.map(
-                action => `import ${uc(action)} from './${action}.js';`
+                action => `import ${uc(action)} from "./${action}.js";`
             ).join(`\n`)
         )
         .replace(

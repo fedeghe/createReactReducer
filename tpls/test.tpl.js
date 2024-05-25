@@ -1,5 +1,5 @@
-import TESTACTIONS from './actions'
-import ACTIONS from '../actions'
+import TESTACTIONS from "./actions"
+import ACTIONS from "../actions"
 
 import rx from "../index.js"
 const { func: reducer } = rx;
