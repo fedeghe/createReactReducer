@@ -4,6 +4,7 @@
   "bin": "index.js",
   "author": "fedeghe <fedeghe@gmail.com>",
   "license": "MIT",
+  "description": "Create conveniently shaped reducer and tests in a snap",
   "repository": {
     "type": "git",
     "url": "https://fedeghe@github.com/fedeghe/createreactreducer.git"
