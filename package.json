@@ -1,13 +1,13 @@
 {
   "name": "createreactreducer",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "bin": "index.js",
   "author": "fedeghe <fedeghe@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://fedeghe@github.com/fedeghe/createreactreducer.git"
-},
+  },
   "keywords": [
     "create react testable reducer",
     "create react reducer",
