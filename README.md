@@ -9,7 +9,7 @@ yarn global add createreactreducer
 ---
 ### Motivation  
 The main reason is my lazyness: bored to manually setup the whole thing around `useReducer`... but, let's make one step back, with some assumptions **of mine**.  
-- actions name should be constants (definitely not strings devs must remember..or worste lookup in the reducer).. thus why not Symbol? (actually the only pro in using Symbols would be to avoid clashes)
+- actions name should be constants (definitely not strings devs must remember ...or even worst lookup in the reducer).. thus why not Symbol? (actually the only pro in using Symbols would be to avoid clashes)
 - each action should have its own function;  
 this also allows implicitely to avoid code noone should write anywhere:
     ``` js
@@ -85,10 +85,7 @@ It will create within the execution folder :
     ```
     </details>   
     <br/>
-3) Proceed implementing the actions functions in the reducer and updating/creating the testcases accordingly  
-4) Enjoy how fast You can spot problems and reach 100% coverage.
-
-
-dinamically loading all the testcases exported through `reducer/test/actions/index.js`.
+3) Proceed implementing the actions functions in the reducer and updating/creating the testcases accordingly.  
+4) Enjoy how fast You can spot problems and reach 100% coverage dinamically loading all the testcases exported through `reducer/test/actions/index.js`.
 
 That's all.
