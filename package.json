@@ -4,6 +4,10 @@
   "bin": "index.js",
   "author": "fedeghe <fedeghe@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://fedeghe@github.com/fedeghe/createreactreducer.git"
+},
   "keywords": [
     "create react testable reducer",
     "create react reducer",
