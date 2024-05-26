@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-const path = require('path'),
-    fs = require('fs'),
+const fs = require('fs'),
     execPath = process.cwd(),
     actions = process.argv.slice(2),
     tplsPath = `${__dirname}/tpls`,
@@ -13,7 +12,8 @@ const path = require('path'),
 
 if (!actions.length) {
     console.log(`Provide as parameter at least one named action
-> createReactReducer add`)
+> createReactReducer add
+`)
     return;
 }
 
@@ -31,15 +31,15 @@ createReducerFolder();
 
 const runners = {
     reducer: (tpl) => {
-        const content = tpl
-            .replace(
+        fs.writeFileSync(
+            `${reducerFolder}/index.js`,
+            tpl.replace(
                 /\/\/ACTIONS/,
-                actions.map(action => {
-                    const A = uc(action);
-                    return `[ACTIONS.${A}]: ({ oldState, payload }) => ({ ...oldState, ...payload })`
-                }).join(`,\n\t\t`)
+                actions
+                    .map(action => `[ACTIONS.${uc(action)}]: ({ oldState, payload }) => ({ ...oldState, ...payload })`)
+                    .join(`,\n\t\t`)
             )
-        fs.writeFileSync(`${reducerFolder}/index.js`, content);
+        );
     },
     actions: tpl => {
         const top = actions.map(action => {
@@ -47,10 +47,12 @@ const runners = {
             return `export const ${A} = Symbol("${A} description here")`
         }).join(`;\n`)
         const exp = `export default {\n\t${actions.map(a => uc(a)).join(`,\n\t`)},\n}`
-        const content = tpl 
-            .replace(/\/\/ACTIONS/, top)
-            .replace(/\/\/EXPORTS/, exp)
-        fs.writeFileSync(`${reducerFolder}/actions.js`, content);
+        fs.writeFileSync(
+            `${reducerFolder}/actions.js`,
+            tpl 
+                .replace(/\/\/ACTIONS/, top)
+                .replace(/\/\/EXPORTS/, exp)
+        );
     },
     test: tpl => {
         fs.writeFileSync(`${reducerFolder}/test/index.spec.js`, tpl);
