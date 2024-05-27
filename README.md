@@ -2,7 +2,7 @@
 
 <img src="./createreactreducer.png" width="300">
 
-To use it you need to install itnstall globally
+To use it you need to install it globally
 ```
 yarn global add createreactreducer
 ```
