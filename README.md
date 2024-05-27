@@ -1,12 +1,20 @@
+<div style="text-align:center">
+<img src="./createreactreducer.png" width="50%" >
+</div>
+<br/>
+
 # Create react reducer
 
-<img src="./createreactreducer.png" width="300">
 
-To use it you need to install it globally
-```
-yarn global add createreactreducer
-```
-then `createreactreducer` will be available as an executable node script.
+Install it globally:  
+
+``` sh
+> yarn global add createreactreducer
+```  
+
+
+to get a `createreactreducer`executable available everywhere.
+
 
 ---
 ### Motivation  
