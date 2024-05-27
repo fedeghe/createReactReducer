@@ -1,5 +1,5 @@
 <div style="text-align:center">
-<img src="./createreactreducer.png" width="50%" >
+  <img src="./createreactreducer.png" width="300px" >
 </div>
 <br/>
 
